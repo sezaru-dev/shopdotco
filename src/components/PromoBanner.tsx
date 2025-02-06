@@ -1,0 +1,29 @@
+'use client'
+import React, { useState } from 'react'
+import Link from "next/link";
+import { HiOutlineX } from "react-icons/hi";
+
+const PromoBanner = () => {
+  const [close, setClose] = useState(false)
+
+  const handleClose = () => {
+    setClose(true)
+  }
+  return (
+    <div className={`${close && 'hidden'} w-full bg-black text-white py-[9px]`}>
+      <div className='wrapper flex justify-end relative px-4'>
+        <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-light text-xs lg:text-sm">Sign up and get 20% off to your first order. 
+          <Link href="/" className="ml-1 underline underline-offset-3">Sign Up Now</Link>
+        </p>
+        <button
+          className="hidden md:block"
+          onClick={handleClose}
+          >
+          <HiOutlineX/>
+        </button>
+      </div>
+  </div>
+  )
+}
+
+export default PromoBanner
