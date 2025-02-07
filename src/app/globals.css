@@ -17,9 +17,24 @@ h1,h2,h3,h4,h5,h6 {
   @apply w-full max-w-[1240px] mx-auto
 }
 
-/* #sliderContainer > article:first-child {
-  @apply bg-blue-200
+#breadcrumbs > li:last-child{
+  @apply text-black
 }
-#sliderContainer > article:nth-child(2)  {
-  @apply bg-purple-200;
-} */
+
+.text-secondary {
+  @apply font-satoshi text-black/60 text-sm
+}
+
+#search-input::-webkit-search-cancel-button {
+  @apply text-red-500; /* Use Tailwind's text color utility */
+}
+#search-input::-ms-clear {
+  @apply text-red-500; /* For Internet Explorer */
+}
+#search-input::-moz-search-cancel-button {
+  @apply text-red-500; 
+}
+
+.active-tab {
+  @apply font-medium text-black border-b-2 border-black
+}

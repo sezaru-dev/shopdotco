@@ -32,7 +32,7 @@ const Header = () => {
             </label>
             <input
               type="search"
-              id='search'
+              id='search-input'
               placeholder='Search for products...'
               className='bg-[#F0F0F0] w-full rounded-full pl-10 pr-4 py-4 placeholder:text-black/40'
             />
