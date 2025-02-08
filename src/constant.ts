@@ -97,26 +97,31 @@ export const customersTestimonies = [
     {
       id: 1,
       name: "Jane Doe",
+      rating: 5,
       review: "I absolutely love the variety of styles available on this site! The quality is top-notch, and the shipping was super fast. I've already recommended it to all my friends!"
     },
     {
       id: 2,
       name: "David Kim",
-      review: `: "I bought a suit for a special event, and it was perfect. The fabric felt luxurious, and the fit was spot-on. I received so many compliments that night. I'll definitely be coming back for more.`
+      rating: 5,
+      review: "I bought a suit for a special event, and it was perfect. The fabric felt luxurious, and the fit was spot-on. I received so many compliments that night. I'll definitely be coming back for more."
     },
     {
       id: 3,
       name: "Emily Johnson",
+      rating: 5,
       review: "The eco-friendly clothing options are fantastic! It's so refreshing to find a store that cares about sustainability. Plus, the prices are very reasonable."
     },
     {
       id: 4,
       name: "Michael Brown",
+      rating: 5,
       review: "I ordered a suit for a wedding, and it was perfect. The fabric felt great, and it looked amazing. I got so many compliments! Highly recommend this store."
     },
     {
       id: 5,
       name: "Sarah Davis",
+      rating: 5,
       review: "I've been a loyal customer for years, and I'm always impressed with the new arrivals. The website is easy to navigate, and the checkout process is seamless. Keep up the great work!"
     }
 
@@ -146,49 +151,49 @@ export const TshirtDetails = {
       },
     ],
     sizes: ['small', 'medium', 'large', 'x-large'],
-    productReview: {
+    productReviews: {
       totalReviews: 451,
       reviews:[
         {
           id: 1,
           rating: 4.5,
           name: 'Samantha D.',
-          comment: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+          review: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
           date: 'August 14, 2023'
         },
         {
           id: 2,
           rating: 4,
           name: 'Alex M.',
-          comment: "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me.",
+          review: "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me.",
           date: 'August 15, 2023'
         },
         {
           id: 3,
           rating: 3.5,
           name: 'Ethan R.',
-          comment: "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt",
+          review: "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt",
           date: 'August 16, 2023'
         },
         {
           id: 4,
           rating: 4,
           name: 'Olivia P.',
-          comment: "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+          review: "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
           date: 'August 17, 2023'
         },
         {
           id: 5,
           rating: 4,
           name: 'Liam K.',
-          comment: "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion.",
+          review: "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion.",
           date: 'August 18, 2023'
         },
         {
           id: 5,
           rating: 4.5,
           name: 'Ava H.',
-          comment: "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.",
+          review: "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.",
           date: 'August 19, 2023'
         },
       ]

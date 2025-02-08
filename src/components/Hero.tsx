@@ -18,7 +18,7 @@ const Hero = () => {
           <p className='text-black/60 my-4 lg:w-[90%] text-sm lg:text-base'>
           Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
           </p>
-          <Button/>
+          <Button text='Shop Now' primary style='w-full lg:w-max px-[54px] py-4'/>
 
           <div className='md:hidden flex items-center justify-around flex-wrap w-full px-8 mt-4'>
             <div className='w-full flex items-center justify-between relative'>

@@ -48,10 +48,10 @@ let isMounted = useXPadding(1240).isMounted
       </div>
       <div className="relative overflow-hidden">
         <div className="relative flex items-center group">
-          <div id='sliderContainer' ref={sliderRef} style={{padding: `0 ${padding}px`}} className="w-full max-w-min h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative space-x-5 snap-x snap-mandatory">
+          <div id='sliderContainer' ref={sliderRef} style={{padding: `0 ${padding}px`}} className="w-full max-w-min h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative space-x-5 snap-x snap-mandatory flex">
             {
               customersTestimonies.map(item => (
-                <Testimony key={item.id} isBlur={false} ref={testimonyRef} testimony={item}/>
+                <Testimony key={item.id} isBlur={false} ref={testimonyRef} testimony={item} twWidth='lg:w-[400px]'/>
               ))
             }
           </div>

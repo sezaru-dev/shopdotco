@@ -1,38 +1,50 @@
 import Image from 'next/image'
 import React, { forwardRef, MutableRefObject } from 'react'
 import CheckIcon from '@/public/check-icon.png'
-import StarIcon from '@/public/star-ratings/star.png'
+import StarRating from '../ui/StarRating'
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 type TestimonyProps ={
   testimony: {
     id: number
+    rating: number
     name:string
     review: string
+    date?: string
   }
   isBlur?: boolean
+  showDate?: boolean
+  twWidth?: string
+  showHorizontalDot?: boolean
 }
-
-const Testimony = forwardRef<HTMLElement, TestimonyProps>(({ isBlur, testimony }, ref) => {
-    const { id, name, review} = testimony
+/* w-full  */
+const Testimony = forwardRef<HTMLElement, TestimonyProps>(({ isBlur, testimony, showDate, twWidth, showHorizontalDot }, ref) => {
+    const { id, name, rating, review} = testimony
   return (
-    <article ref={ref as React.Ref<HTMLElement>} className='relative inline-block h-full border border-black/10 py-7 px-8 rounded-xl w-[400px] flex-none overflow-hidden snap-center'>
+    <article ref={ref as React.Ref<HTMLElement>} className={`${twWidth ? `${twWidth}`: 'w-full'} relative h-full border border-black/10 py-7 px-8 rounded-xl flex-none overflow-hidden snap-center flex flex-col`}>
       {
         isBlur &&  <div className='absolute top-0 left-0 h-full w-full backdrop-blur-[2px]'/> 
       }
-      <div id='test' className='inline-flex gap-[6.49px]'>
-        <Image src={StarIcon} height={22.5} width={22.5} alt='star.png'/>
-        <Image src={StarIcon} height={22.5} width={22.5} alt='star.png'/>
-        <Image src={StarIcon} height={22.5} width={22.5} alt='star.png'/>
-        <Image src={StarIcon} height={22.5} width={22.5} alt='star.png'/>
-        <Image src={StarIcon} height={22.5} width={22.5} alt='star.png'/>
-
+      <div className='inline-flex items-center justify-between'>
+        <StarRating rating={rating} showNumbers={false} gapStyle='gap-[6.49px]'/> 
+        {
+          showHorizontalDot &&
+          <button className='text-black/40 text-2xl'>
+            <HiOutlineDotsHorizontal/>
+          </button>
+        }
       </div>
-      <div className='mt-[15px]'>
+
+      <div className='mt-[15px] h-full'>
         <div className='flex items-center pb-3 gap-1'>
           <h5 className='font-satoshi font-bold text-xl'>{name}</h5>
           <Image src={CheckIcon} height={20} width={20} alt='check-icon.png'/>
         </div>
-        <p className='text-black/60 whitespace-normal'>{review}</p>
+        <blockquote className='text-secondary whitespace-normal'>"{review}"</blockquote>
+        {
+          showDate &&
+          <p className='text-secondary font-medium whitespace-normal mt-4'>Posted on August 15, 2024</p>
+        }
       </div>
     </article>
   )

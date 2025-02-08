@@ -5,11 +5,12 @@ import { TiStar, TiStarHalf  } from "react-icons/ti";
 
 type RatingType = {
   rating: number
-  styles: string
+  styles?: string
   showNumbers?: boolean
+  gapStyle?: string
 }
 
-const StarRating = ({rating, styles, showNumbers}: RatingType) => {
+const StarRating = ({rating, styles, showNumbers, gapStyle}: RatingType) => {
     const [iswholeNumber, setIsWholeNumber] = useState(true)
     const [firstDigit, setFirstDigit] = useState(0)
     const [arrayPlaceholder, setArrayPlaceholder] = useState<number[]>([])
@@ -56,7 +57,7 @@ useEffect(() => {
   
   return (
     <div className={`${styles} inline-flex items-center`}>
-      <ul className='flex items-center gap-[5px]'>
+      <ul className={`${gapStyle ? `${gapStyle}`: 'gap-[5px]' } flex items-center`}>
         {
           arrayPlaceholder.map(item => (
             <li key={item}><TiStar color='#FFC633' className='text-[18.67px] lg:text-[24.71px]'/></li>
