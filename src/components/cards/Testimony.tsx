@@ -12,18 +12,24 @@ type TestimonyProps ={
     review: string
     date?: string
   }
-  isBlur?: boolean
+  blurredCardIndex: number[]
   showDate?: boolean
   twWidth?: string
   showHorizontalDot?: boolean
+  leftBtnClickCount?: number
 }
-/* w-full  */
-const Testimony = forwardRef<HTMLElement, TestimonyProps>(({ isBlur, testimony, showDate, twWidth, showHorizontalDot }, ref) => {
+
+const Testimony = forwardRef<HTMLElement, TestimonyProps>(({ blurredCardIndex, testimony, showDate, twWidth, showHorizontalDot, leftBtnClickCount }, ref) => {
     const { id, name, rating, review} = testimony
   return (
-    <article ref={ref as React.Ref<HTMLElement>} className={`${twWidth ? `${twWidth}`: 'w-full'} relative h-full border border-black/10 py-7 px-8 rounded-xl flex-none overflow-hidden snap-center flex flex-col`}>
+    <article ref={ref as React.Ref<HTMLElement>} className={`${twWidth ? `${twWidth}`: 'w-full'} relative h-full border border-black/10 shadow-sm py-7 px-8 rounded-xl flex-none overflow-hidden snap-center flex flex-col`}>
+      
       {
-        isBlur &&  <div className='absolute top-0 left-0 h-full w-full backdrop-blur-[2px]'/> 
+        blurredCardIndex.map(item => {
+          if (item === id) {
+            return <div key={id} className='absolute top-0 left-0 h-full w-full backdrop-blur-[1px]'/> 
+          }
+        })
       }
       <div className='inline-flex items-center justify-between'>
         <StarRating rating={rating} showNumbers={false} gapStyle='gap-[6.49px]'/> 
