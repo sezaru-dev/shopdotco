@@ -20,8 +20,14 @@ export default function Home() {
       <TopSelling/>
       <BrowseByDressStyle/>
       <Testimonies/>
+      {/*
+      slider of this component still needs to be fix 
+      1. rightmost part of the slider items needs to be still at rightmost of the wrapper
+        -either change the button functions or
+        -change the approach of how i make the slider like overflow-x-scroll, scroll-snap
+      2. slider component for small screens is still not exist yet
+      */}
       <Footer/>
-      
     </>
   );
 }
