@@ -14,6 +14,7 @@ import Tabs from '@/components/ui/Tabs';
 import ProductDetailForm from '@/components/ProductDetailForm';
 import { Metadata } from 'next';
 import ReviewsViewer from '@/components/ReviewsViewer';
+import YouMayAlsoLike from '@/components/YouMayAlsoLike';
 
 export const metadata: Metadata = {
   title: "One Life Graphic T-Shirt",
@@ -84,10 +85,7 @@ const page = () => {
           
         </div>
       </section>
-      <div className='mt-96'></div>
-      <section>
-        
-      </section>
+      <YouMayAlsoLike/>
       <Footer/>
     </>
   )

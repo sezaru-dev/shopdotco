@@ -12,7 +12,7 @@ type TestimonyProps ={
     review: string
     date?: string
   }
-  blurredCardIndex: number[]
+  blurredCardIndex?: number[]
   showDate?: boolean
   twWidth?: string
   showHorizontalDot?: boolean
@@ -25,7 +25,7 @@ const Testimony = forwardRef<HTMLElement, TestimonyProps>(({ blurredCardIndex, t
     <article ref={ref as React.Ref<HTMLElement>} className={`${twWidth ? `${twWidth}`: 'w-full'} relative h-full border border-black/10 shadow-sm py-7 px-8 rounded-xl flex-none overflow-hidden snap-center flex flex-col`}>
       
       {
-        blurredCardIndex.map(item => {
+        blurredCardIndex?.map(item => {
           if (item === id) {
             return <div key={id} className='absolute top-0 left-0 h-full w-full backdrop-blur-[1px]'/> 
           }

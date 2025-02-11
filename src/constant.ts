@@ -6,6 +6,10 @@ import TopSelling1 from '@/public/top-selling/top-selling1.png'
 import TopSelling2 from '@/public/top-selling/top-selling2.png'
 import TopSelling3 from '@/public/top-selling/top-selling3.png'
 import TopSelling4 from '@/public/top-selling/top-selling4.png'
+import RelatedProduct1 from '@/public/you-may-also-like/image1.png'
+import RelatedProduct2 from '@/public/you-may-also-like/image2.png'
+import RelatedProduct3 from '@/public/you-may-also-like/image3.png'
+import RelatedProduct4 from '@/public/you-may-also-like/image4.png'
 
 export const NewArrivalProducts = [
   {
@@ -199,3 +203,46 @@ export const TshirtDetails = {
       ]
     }
   }
+
+  export const YouMayAlsoLikeProducts = [
+    {
+      id: 1,
+      productName: 'Polo with constrast trims',
+      image: RelatedProduct1,
+      rating: 4.0,
+      currentPrice: 193.6,
+      isOnPromo: true,
+      previousPrice: 242,
+      discount: 20
+    },
+    {
+      id: 2,
+      productName: 'Gradient Graphic T-shirt',
+      image: RelatedProduct2,
+      rating: 3.5,
+      currentPrice: 145,
+      isOnPromo: false,
+      previousPrice: 0,
+      discount: 0
+    },
+    {
+      id: 3,
+      productName: 'Polo with Tipping designs',
+      image: RelatedProduct3,
+      rating: 4.5,
+      currentPrice: 180,
+      isOnPromo: false,
+      previousPrice: 0,
+      discount: 0
+    },
+    {
+      id: 4,
+      productName: 'Black Striped T-shirt',
+      image: RelatedProduct4,
+      rating: 5.0,
+      currentPrice: 105,
+      isOnPromo: true,
+      previousPrice: 150,
+      discount: 30
+    },
+  ]
