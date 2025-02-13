@@ -1,7 +1,8 @@
 import React from 'react'
 import HoriontalLine from '../HoriontalLine'
 import { HiOutlineX, HiOutlineChevronRight } from "react-icons/hi";
-import RangeSlider from './RangeSlider';
+
+import RangeFilter from './RangeFilter';
 
 type FilterModalProps = {
   show:boolean
@@ -29,7 +30,8 @@ const FilterModal = ({show}:FilterModalProps) => {
         </div>
 
         <HoriontalLine/>
-        <RangeSlider title="Price"/>
+        <RangeFilter title="Price" style='mt-5'/>
+        <HoriontalLine styles='mt-10'/>
       </div>
     </>
   )

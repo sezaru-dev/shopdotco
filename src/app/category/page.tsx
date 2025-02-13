@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <div className=''>
-      <FilterModal show={false}/>
+      <FilterModal show={true}/>
       <HoriontalLine />
       <section className='wrapper'>
         <div className='mt-5'>

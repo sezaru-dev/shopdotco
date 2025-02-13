@@ -40,13 +40,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .price-slider::-webkit-slider-thumb{
-  @apply appearance-none w-[20px] h-[20px] bg-black rounded-full cursor-pointer relative
+  @apply appearance-none w-[20px] h-[20px] bg-black rounded-full cursor-pointer relative z-50
 }
 
-/* #minPriceSlider::-webkit-slider-thumb {
-  @apply appearance-none w-[20px] h-[20px] bg-black rounded-full cursor-pointer relative
-}
- */
-#minPriceSlider::-webkit-slider-thumb::after{
- @apply content-[''] absolute -bottom-10 left-0 w-[20px] h-[20px] bg-red-500 rounded-e-lg
-}
+
+
+
