@@ -9,9 +9,11 @@ type ColorType = {
 
 type ColorChoicesProps = {
   colors: ColorType[]
+  gap?: string
+  isVisible?: boolean
 }
 
-const ColorChoices = ({colors}:ColorChoicesProps) => {
+const ColorChoices = ({colors, gap, isVisible}:ColorChoicesProps) => {
   const [chosenColor, setChosenColor] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,15 +21,16 @@ const ColorChoices = ({colors}:ColorChoicesProps) => {
   }
 
   return (
-    <div className='flex flex-wrap gap-3 mt-4'>
+    <div className={`${gap ? gap : 'gap-3'} ${isVisible && 'hidden'} flex flex-wrap gap-3 mt-4`}>
+      {/* gap-3 */}
       {
         colors.map( color => (
           <div key={color.name}>
             <label htmlFor={color.name}>
-              <div style={{backgroundColor: `${color.code}`}} className={`w-[39.14px] h-[39.14px] rounded-full grid place-items-center cursor-pointer`}>
+              <div style={{backgroundColor: `${color.code}`}} className={`border-2 border-black/20 w-[39.14px] h-[39.14px] rounded-full grid place-items-center cursor-pointer`}>
                 {
                   chosenColor == color.name &&
-                <HiCheck color='#fff'/>
+                <HiCheck color={`${chosenColor == 'white' ? '#000': '#fff'}`}/>
                 }
               </div>
             </label>

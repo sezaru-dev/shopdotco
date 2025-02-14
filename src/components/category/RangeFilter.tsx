@@ -21,9 +21,9 @@ const RangeFilter = ({title, style}:RangeFilterProps) => {
         <button onClick={handleClick}>
           {
             open ? 
-            <HiOutlineChevronDown/>
-            :
             <HiOutlineChevronUp />
+            :
+            <HiOutlineChevronDown/>
           }
         </button>
       </div>

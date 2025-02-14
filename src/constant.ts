@@ -10,6 +10,7 @@ import RelatedProduct1 from '@/public/you-may-also-like/image1.png'
 import RelatedProduct2 from '@/public/you-may-also-like/image2.png'
 import RelatedProduct3 from '@/public/you-may-also-like/image3.png'
 import RelatedProduct4 from '@/public/you-may-also-like/image4.png'
+import { min } from 'lodash'
 
 export const NewArrivalProducts = [
   {
@@ -246,3 +247,55 @@ export const TshirtDetails = {
       discount: 30
     },
   ]
+
+  export const FilterConstants = {
+    category: ['T-shirts', 'Shorts', 'Shirts', 'Hoodie', 'Jeans'],
+    price: {
+      minDefault: 50,
+      maxDefault: 200
+    },
+    colors:[
+      {
+        name: 'green',
+        code: '#00C12B',
+      },
+      {
+        name: 'red',
+        code: '#F50606'
+      },
+      {
+        name: 'yellow',
+        code: '#F5DD06'
+      },
+      {
+        name: 'orange',
+        code: '#F57906'
+      },
+      {
+        name: 'sky',
+        code: '#06CAF5'
+      },
+      {
+        name: 'blue',
+        code: '#063AF5'
+      },
+      {
+        name: 'violet',
+        code: '#7D06F5'
+      },
+      {
+        name: 'pink',
+        code: '#F506A4'
+      },
+      {
+        name: 'white',
+        code: '#fff'
+      },
+      {
+        name: 'black',
+        code: '#000'
+      },
+    ],
+    sizes: ['XX-Small', 'X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large', '3X-Large', '4X-Large'],
+    dressStyle: ['Casual', 'Formal', 'Party', 'Gym']
+  }

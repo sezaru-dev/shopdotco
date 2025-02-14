@@ -3,9 +3,10 @@ import React, { useState } from 'react'
 
 type SizeProps = {
   sizes: string[]
+  isVisible?: boolean
 }
 
-const SizeChoices = ({sizes}:SizeProps) => {
+const SizeChoices = ({sizes, isVisible}:SizeProps) => {
   const [chosenSize, setChosenSize] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,7 +15,7 @@ const SizeChoices = ({sizes}:SizeProps) => {
   }
 
   return (
-    <div className='flex flex-wrap gap-2 mt-4 w-full'>
+    <div className={`${isVisible && ' hidden'} flex flex-wrap gap-2 mt-4 w-full`}>
       {
         sizes.map( (size, index) => (
           <div key={index} >
