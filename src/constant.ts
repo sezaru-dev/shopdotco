@@ -10,7 +10,16 @@ import RelatedProduct1 from '@/public/you-may-also-like/image1.png'
 import RelatedProduct2 from '@/public/you-may-also-like/image2.png'
 import RelatedProduct3 from '@/public/you-may-also-like/image3.png'
 import RelatedProduct4 from '@/public/you-may-also-like/image4.png'
-import { min } from 'lodash'
+import CategoryImg1 from '@/public/category/img1.png'
+import CategoryImg2 from '@/public/category/img2.png'
+import CategoryImg3 from '@/public/category/img3.png'
+import CategoryImg4 from '@/public/category/img4.png'
+import CategoryImg5 from '@/public/category/img5.png'
+import CategoryImg6 from '@/public/category/img6.png'
+import CategoryImg7 from '@/public/category/img7.png'
+import CategoryImg8 from '@/public/category/img8.png'
+import CategoryImg9 from '@/public/category/img9.png'
+
 
 export const NewArrivalProducts = [
   {
@@ -299,3 +308,96 @@ export const TshirtDetails = {
     sizes: ['XX-Small', 'X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large', '3X-Large', '4X-Large'],
     dressStyle: ['Casual', 'Formal', 'Party', 'Gym']
   }
+
+  export const CategorySampleProducts = [
+    {
+      id: 1,
+      productName: 'Gradient Graphic T-shirt',
+      image: CategoryImg1,
+      rating: 3.5,
+      currentPrice: 145,
+      isOnPromo: false,
+      previousPrice: 0,
+      discount: 0
+    },
+    {
+      id: 2,
+      productName: 'Polo with Tipping Details',
+      image: CategoryImg2,
+      rating: 4.5,
+      currentPrice: 180,
+      isOnPromo: false,
+      previousPrice: 0,
+      discount: 0
+    },
+    {
+      id: 3,
+      productName: 'Black Stripped T-shirt',
+      image: CategoryImg3,
+      rating: 5.0,
+      currentPrice: 120,
+      isOnPromo: true,
+      previousPrice: 150,
+      discount: 30
+    },
+    {
+      id: 4,
+      productName: 'Skinny Fit Jeans',
+      image: CategoryImg4,
+      rating: 3.5,
+      currentPrice: 240,
+      isOnPromo: true,
+      previousPrice: 260,
+      discount: 20
+    },
+    {
+      id: 5,
+      productName: 'Checkered Shirt',
+      image: CategoryImg5,
+      rating: 4.5,
+      currentPrice: 180,
+      isOnPromo: false,
+      previousPrice: 0,
+      discount: 0
+    },
+    {
+      id: 6,
+      productName: 'Sleeve Striped T-shirt',
+      image: CategoryImg6,
+      rating: 4.5,
+      currentPrice: 130,
+      isOnPromo: true,
+      previousPrice: 160,
+      discount: 30
+    },
+    { 
+      id: 7,
+      productName: 'Vertical Striped Shirt',
+      image: CategoryImg7,
+      rating: 5.0,
+      currentPrice: 212,
+      isOnPromo: true,
+      previousPrice: 232,
+      discount: 20
+    },
+    { 
+      id: 8,
+      productName: 'Courage Graphic T-shirt',
+      image: CategoryImg8,
+      rating: 4.0,
+      currentPrice: 145,
+      isOnPromo: false,
+      previousPrice: 0,
+      discount: 0
+    },
+    { 
+      id: 9,
+      productName: 'Loose Fit Bermuda Shorts',
+      image: CategoryImg9,
+      rating: 3.0,
+      currentPrice: 80,
+      isOnPromo: false,
+      previousPrice: 0,
+      discount: 0
+    },
+  ]

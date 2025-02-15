@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import PromoBanner from "@/components/PromoBanner";
+import Footer from "@/components/Footer";
 
 /* const Montserrat = Font_Montserrat({
   weight: ['300','400','500','600','700', '800', '900'],
@@ -25,11 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` antialiased`}
+        className={` antialiased relative`}
       >
         <PromoBanner/>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

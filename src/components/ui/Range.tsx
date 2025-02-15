@@ -64,7 +64,7 @@ const Range = ({ min, max, step, defaultValue, minSlider, maxSlider }: RangeSlid
           step={step}
           value={rangeValue}
           onChange={handleRangeChange}
-          className={`price-slider absolute w-full h-[6px] flex-none bg-gray-200 rounded-l-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500`}
+          className={`price-slider absolute w-full h-[6px] flex-none  bg-gray-200 rounded-l-lg appearance-none cursor-pointer`}
         />
       </div>
       <p

@@ -17,9 +17,9 @@ const ColorFilter = () => {
         <button onClick={handleClick}>
           {
             open ? 
-            <HiOutlineChevronDown/>
-            :
             <HiOutlineChevronUp />
+            :
+            <HiOutlineChevronDown/>
           }
         </button>
       </div>

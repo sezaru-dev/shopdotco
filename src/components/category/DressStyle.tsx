@@ -17,13 +17,13 @@ const DressStyle = () => {
         <button onClick={handleClick}>
           {
             open ? 
-            <HiOutlineChevronDown/>
-            :
             <HiOutlineChevronUp />
+            :
+            <HiOutlineChevronDown/>
           }
         </button>
       </div>
-      <ul className={`${open && 'hidden'} flex flex-col gap-5 py-5`}>
+      <ul className={`${open || 'hidden'} flex flex-col gap-5 py-5`}>
         {
           FilterConstants.dressStyle.map((shirtCategory, index) => (
             <li key={index} className='flex items-center justify-between cursor-pointer'>{shirtCategory} <HiOutlineChevronRight/></li>

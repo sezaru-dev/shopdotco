@@ -86,7 +86,7 @@ const page = () => {
         </div>
       </section>
       <YouMayAlsoLike/>
-      <Footer/>
+      
     </>
   )
 }

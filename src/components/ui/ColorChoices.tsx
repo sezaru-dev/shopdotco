@@ -18,19 +18,20 @@ const ColorChoices = ({colors, gap, isVisible}:ColorChoicesProps) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setChosenColor(e.target.value)
+    
+    
   }
 
   return (
-    <div className={`${gap ? gap : 'gap-3'} ${isVisible && 'hidden'} flex flex-wrap gap-3 mt-4`}>
-      {/* gap-3 */}
+    <div className={`${gap ? gap : 'gap-3'} ${isVisible || 'hidden'} flex flex-wrap gap-3 mt-4`}>
       {
         colors.map( color => (
           <div key={color.name}>
             <label htmlFor={color.name}>
-              <div style={{backgroundColor: `${color.code}`}} className={`border-2 border-black/20 w-[39.14px] h-[39.14px] rounded-full grid place-items-center cursor-pointer`}>
+              <div style={{backgroundColor: `${color.code}`}} className={`border-2 border-black/20 w-[39.14px] h-[39.14px] lg:w-[37px] lg:h-[37px] rounded-full grid place-items-center cursor-pointer`}>
                 {
-                  chosenColor == color.name &&
-                <HiCheck color={`${chosenColor == 'white' ? '#000': '#fff'}`}/>
+                  color.name === chosenColor ?
+                <HiCheck color={`${chosenColor == 'white' ? '#000': '#fff'}`} className=''/> : null
                 }
               </div>
             </label>

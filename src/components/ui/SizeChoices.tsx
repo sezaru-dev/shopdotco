@@ -15,7 +15,7 @@ const SizeChoices = ({sizes, isVisible}:SizeProps) => {
   }
 
   return (
-    <div className={`${isVisible && ' hidden'} flex flex-wrap gap-2 mt-4 w-full`}>
+    <div className={`${isVisible || ' hidden'} flex flex-wrap gap-2 mt-4 w-full`}>
       {
         sizes.map( (size, index) => (
           <div key={index} >

@@ -1,8 +1,23 @@
-import FilterModal from '@/components/category/FilterModal';
+import ProductCard from '@/components/cards/ProductCard';
+
 import HoriontalLine from '@/components/HoriontalLine';
+import Pagination from '@/components/ui/Pagination';
+import { CategorySampleProducts, FilterConstants } from '@/constant';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import React from 'react'
-import { HiOutlineChevronRight } from 'react-icons/hi';
+import { HiOutlineChevronRight, HiOutlineX } from 'react-icons/hi';
+import SliderIcon from '@/public/slider-icon.svg'
+import CategoryProductCard from '@/components/cards/CategoryProductCard';
+import RangeFilter from '@/components/category/RangeFilter';
+import ColorFilter from '@/components/category/ColorFilter';
+import SizesFilter from '@/components/category/SizesFilter';
+import DressStyle from '@/components/category/DressStyle';
+import Button from '@/components/Button';
+import Filter from '@/components/category/Filter';
+import ModalOverlay from '@/components/ui/ModalOverlay';
+import { ModalProvider } from '@/context/ModalContext';
+import FilterIconButton from '@/components/category/FilterIconButton';
 
 export const metadata: Metadata = {
   title: "Category",
@@ -11,18 +26,68 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <div className=''>
-      <FilterModal show={true}/>
-      <HoriontalLine />
-      <section className='wrapper'>
-        <div className='mt-5'>
-          <ul id='breadcrumbs' className='flex items-center gap-[6px] lg:gap-3 text-sm font-satoshi text-black/60 '>
-            <li className='inline-flex items-center gap-1'>Home <HiOutlineChevronRight/></li>
-            <li className='inline-flex items-center gap-1'>Casual</li>
-          </ul>
+    <>
+      <section className='h-max'>
+        <ModalProvider>        
+          <ModalOverlay/>
+
+        <div className='relative'>          
+          <div className='wrapper px-4 mb-56'>
+            <HoriontalLine />
+
+            {/* breadcrumbs */}
+            <div className='mt-5'>
+              <ul id='breadcrumbs' className='flex items-center gap-[6px] lg:gap-3 text-sm font-satoshi text-black/60 '>
+                <li className='inline-flex items-center gap-1'>Home <HiOutlineChevronRight/></li>
+                <li className='inline-flex items-center gap-1'>Casual</li>
+              </ul>
+            </div>
+
+            {/* main container */}
+            <div className='w-full grid lg:grid-cols-12 gap-5 mt-3 lg:mt-6'>
+                {/* filter */}
+
+                  <Filter/>
+                
+
+                {/* filtered products */}
+                <div className='lg:col-span-9'>
+                  <div className='flex items-baseline gap-2 lg:gap-0'>
+                    <h3 className='text-2xl lg:text-[32px] font-bold'>Casual</h3>
+
+                    <div className='flex items-center justify-between lg:justify-end  gap-3 w-full'>
+                      <p className='text-secondary text-xs md:text-base'>Showing 1-10 of 100 Products</p>
+                      <div className='hidden lg:flex items-center'>
+                        <label htmlFor="" className='text-secondary'>Sort by:</label>
+                        <select name="sort" id="sort" className='font-medium font-satoshi'>
+                          <option value="most-popular">Most Popular</option>
+                          <option value="most-popular">Highly Rated</option>
+                          <option value="most-popular">Cheapest</option>
+                          <option value="most-popular">Expensive</option>
+                        </select>
+                      </div>
+
+                      <FilterIconButton/>
+                    </div>
+                  </div>
+
+                  {/* products */}
+                  <div className='grid grid-cols-2 md:grid-cols-3 gap-[14px] lg:gap-5 my-4'>
+                    {
+                      CategorySampleProducts.map(product => (
+                        <CategoryProductCard key={product.id} {...product}/>
+                      ))
+                    }
+                  </div>
+                  <HoriontalLine styles='py-5' />
+                  <Pagination/>
+                </div>
+            </div>
+          </div>
         </div>
+        </ModalProvider>
       </section>
-    </div>
+    </>
   )
 }
 

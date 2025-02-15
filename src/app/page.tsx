@@ -27,7 +27,7 @@ export default function Home() {
         -change the approach of how i make the slider like overflow-x-scroll, scroll-snap
       2. slider component for small screens is still not exist yet
       */}
-      <Footer/>
+      
     </>
   );
 }

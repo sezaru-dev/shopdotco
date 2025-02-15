@@ -17,9 +17,9 @@ const SizesFilter = () => {
         <button onClick={handleClick}>
           {
             open ? 
-            <HiOutlineChevronDown/>
-            :
             <HiOutlineChevronUp />
+            :
+            <HiOutlineChevronDown/>
           }
         </button>
       </div>
