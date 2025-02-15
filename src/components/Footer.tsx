@@ -10,12 +10,11 @@ import SubscribeSection from './SubscribeSection';
 
 const Footer = () => {
   return (
-    <footer className='px-4 pb-[88px] mt-[31.58px] bg-[#F0F0F0]'>
-      <div className='wrapper relative'>
+    <footer className='px-4 mt-[7rem] lg:mt-[9.5rem] pt-[190px] lg:pt-[140px] pb-[88px]  bg-[#F0F0F0]'>
+      <div className="relative wrapper ">
         <SubscribeSection/>
       </div>
-      
-      <div className='wrapper mb-6 pt-[189.58px] lg:pt-[140px] lg:flex lg:justify-between '>
+      <div className='wrapper mb-6 lg:flex lg:justify-between '>
 
         <div className='lg:max-w-[248px]'>
           <h2 className='font-bold text-[28.85px] mb-3'>SHOP.CO</h2>

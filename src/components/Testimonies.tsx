@@ -85,7 +85,7 @@ const slideRight = () => {
 
   
   return (
-    <section className='px-4 lg:px-0 relative pb-[184.81px] lg:pb-[170px]'>
+    <section className='px-4 lg:px-0 relative'>
       <div ref={wrapperRef} className="wrapper px-4 lg:px-0">
         <div className='flex items-end lg:items-center justify-between lg:mb-[40px]'>
           <h2 className=' font-bold text-[2.01rem] lg:text-5xl mt-4 lg:mb-[28px]'>OUR HAPPY CUSTOMERS</h2>
