@@ -16,7 +16,7 @@ const PromoBanner = () => {
           <Link href="/" className="ml-1 underline underline-offset-3">Sign Up Now</Link>
         </p>
         <button
-          className="hidden md:block"
+          className="hidden md:block relative z-10"
           onClick={handleClose}
           >
           <HiOutlineX/>
