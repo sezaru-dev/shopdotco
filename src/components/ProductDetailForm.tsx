@@ -21,7 +21,7 @@ const ProductDetailForm = () => {
       {/* colors */}
       <div>
         <p className='text-secondary lg:text-base'>Select Colors</p>
-        <ColorChoices colors={TshirtDetails.colors}/>
+        <ColorChoices colors={TshirtDetails.colors} isVisible/>
       </div>
 
       <HoriontalLine styles='mb-6 mt-[23.86px]' />
