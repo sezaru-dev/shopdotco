@@ -29,7 +29,7 @@ const ProductDetailForm = () => {
       {/* sizes */}
       <div className='w-full'>
         <p className='text-secondary lg:text-base'>Choose Sizes</p>
-        <SizeChoices sizes={TshirtDetails.sizes}/>
+        <SizeChoices sizes={TshirtDetails.sizes} isVisible/>
       </div>
 
       <HoriontalLine styles='my-6'/>
