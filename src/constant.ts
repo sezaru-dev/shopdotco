@@ -401,3 +401,33 @@ export const TshirtDetails = {
       discount: 0
     },
   ]
+
+  export const SampleCartItems = [
+    {
+      id: 1,
+      productName: 'Gradient Graphic T-shirt',
+      image: RelatedProduct2,
+      size: 'Large',
+      color: 'White',
+      price: 145,
+      quantity: 1
+    },
+    {
+      id: 2,
+      productName: 'Checkered Shirt',
+      image: NewArrival3,
+      size: 'Medium',
+      color: 'Red',
+      price: 180,
+      quantity: 1
+    },
+    {
+      id: 3,
+      productName: 'Skinny Fit Jeans',
+      image: NewArrival2,
+      size: 'Large',
+      color: 'Blue',
+      price: 240,
+      quantity: 1
+    },
+  ]
