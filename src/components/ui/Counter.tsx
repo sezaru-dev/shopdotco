@@ -43,5 +43,3 @@ const Counter = ({width, style, quantity}:CounterType) => {
 }
 
 export default Counter
-
-/* py-3 px-4 lg:py-4 lg:px-5 */

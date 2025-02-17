@@ -36,7 +36,7 @@ const ProductDetailForm = () => {
 
       {/* quantity */}
       <div className='w-full inline-flex items-center gap-3'>
-        <Counter width='30%'/>
+        <Counter width='30%' style='py-3 px-4 lg:py-4 lg:px-5'/>
         <Button text='Add To Cart' primary style='py-[12.5px] px-[54px] w-[70%] text-sm lg:text-base'/>
       </div>
     </form>
