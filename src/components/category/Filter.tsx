@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import HoriontalLine from '../HoriontalLine'
+
 import { HiOutlineX, HiOutlineChevronRight } from "react-icons/hi";
 import RangeFilter from './RangeFilter';
 import { FilterConstants } from '@/constant';
@@ -11,6 +11,7 @@ import Button from '../Button';
 import SliderIcon from '@/public/slider-icon.svg'
 import Image from 'next/image';
 import { useModal } from '@/context/ModalContext';
+import HorizontalLine from '../HorizontalLine';
 
 
 const Filter = () => {
@@ -25,7 +26,7 @@ const Filter = () => {
         </button>
         <button className='lg:hidden' onClick={closeModal}><HiOutlineX/></button>
       </div>
-      <HoriontalLine styles='py-6'/>
+      <HorizontalLine styles='py-6'/>
       <ul className='flex flex-col gap-5 text-secondary'>
         {
           FilterConstants.category.map((shirtCategory, index) => (
@@ -33,13 +34,13 @@ const Filter = () => {
           ))
         }
       </ul>
-      <HoriontalLine styles='py-6'/>
+      <HorizontalLine styles='py-6'/>
       <RangeFilter title="Price" style=''/>
-      <HoriontalLine styles='py-6'/>
+      <HorizontalLine styles='py-6'/>
       <ColorFilter/>
-      <HoriontalLine styles='py-6'/>
+      <HorizontalLine styles='py-6'/>
       <SizesFilter/>
-      <HoriontalLine styles='py-6'/>
+      <HorizontalLine styles='py-6'/>
       <DressStyle/>
       <Button text='Apply Filter' style='w-full py-4 mt-1' primary onClick={closeModal}/>
     </aside>

@@ -4,7 +4,7 @@ import { PiTrashFill } from 'react-icons/pi'
 import Counter from '../ui/Counter'
 import Image from 'next/image'
 import { SampleCartItems } from '@/constant'
-import HoriontalLine from '../HoriontalLine'
+import HorizontalLine from '../HorizontalLine'
 
 const CartItems = () => {
   return (
@@ -37,7 +37,7 @@ const CartItems = () => {
                 </div>
               </div>
             </div>
-            {index < SampleCartItems.length - 1 && <HoriontalLine styles='py-6' />}
+            {index < SampleCartItems.length - 1 && <HorizontalLine styles='py-6' />}
           </React.Fragment>
         ))
       }

@@ -1,23 +1,15 @@
 import ProductCard from '@/components/cards/ProductCard';
-
-import HoriontalLine from '@/components/HoriontalLine';
 import Pagination from '@/components/ui/Pagination';
-import { CategorySampleProducts, FilterConstants } from '@/constant';
+import { CategorySampleProducts } from '@/constant';
 import { Metadata } from 'next';
-import Image from 'next/image';
 import React from 'react'
-import { HiOutlineChevronRight, HiOutlineX } from 'react-icons/hi';
-import SliderIcon from '@/public/slider-icon.svg'
+import { HiOutlineChevronRight } from 'react-icons/hi';
 import CategoryProductCard from '@/components/cards/CategoryProductCard';
-import RangeFilter from '@/components/category/RangeFilter';
-import ColorFilter from '@/components/category/ColorFilter';
-import SizesFilter from '@/components/category/SizesFilter';
-import DressStyle from '@/components/category/DressStyle';
-import Button from '@/components/Button';
 import Filter from '@/components/category/Filter';
 import ModalOverlay from '@/components/ui/ModalOverlay';
 import { ModalProvider } from '@/context/ModalContext';
 import FilterIconButton from '@/components/category/FilterIconButton';
+import HorizontalLine from '@/components/HorizontalLine';
 
 export const metadata: Metadata = {
   title: "Category",
@@ -33,7 +25,7 @@ const page = () => {
 
         <div className='relative'>          
           <div className='wrapper px-4 mb-56'>
-            <HoriontalLine />
+            <HorizontalLine />
 
             {/* breadcrumbs */}
             <div className='mt-5'>
@@ -79,7 +71,7 @@ const page = () => {
                       ))
                     }
                   </div>
-                  <HoriontalLine styles='py-5' />
+                  <HorizontalLine styles='py-5' />
                   <Pagination/>
                 </div>
             </div>

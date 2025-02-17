@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import HoriontalLine from '../HoriontalLine';
+import HoriontalLine from '../HorizontalLine';
 import PromoIcon from '@/public/promoIcon.svg'
 import Image from 'next/image';
 import Button from '../Button';

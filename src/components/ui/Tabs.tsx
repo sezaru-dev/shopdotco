@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import HoriontalLine from '../HoriontalLine'
+import HoriontalLine from '../HorizontalLine'
 
 const Tabs = () => {
   const [currentTab, setCurrentTab] = useState<number>(2)

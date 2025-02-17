@@ -3,7 +3,7 @@ type HrProps ={
   styles?: string
 }
 
-const HoriontalLine = ({styles}:HrProps) => {
+const HorizontalLine = ({styles}:HrProps) => {
   return (
     <div className={`${styles} wrapper`}>
       <div className="w-full h-[1px] bg-black/10"/>
@@ -11,4 +11,4 @@ const HoriontalLine = ({styles}:HrProps) => {
   )
 }
 
-export default HoriontalLine
+export default HorizontalLine
