@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {
@@ -7,7 +8,7 @@ type Props = {
 }
 const CatergoryCard = ({title, image}:Props) => {
   return (
-    <article className={`
+    <Link href='/product-detail' className={`
     ${title == 'Casual' && 'col-span-1'}
     ${title == 'Formal' && 'md:col-span-2'}
     ${title == 'Party' && 'md:col-span-2'}
@@ -20,7 +21,7 @@ const CatergoryCard = ({title, image}:Props) => {
         objectFit="cover"
         className='w-[120%]'/>
       <h5 className='relative z-10 font-satoshi font-bold text-2xl pt-4 pl-6'>{title}</h5>
-    </article>
+    </Link>
   )
 }
 

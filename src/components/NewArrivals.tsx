@@ -13,7 +13,7 @@ const NewArrivals = () => {
         <ProductsViewer products={NewArrivalProducts}/>
 
         <div className='grid w-full place-items-center mt-7'>
-          <Link href='/' className='py-4 px-16 border-2 border-black/10 rounded-full'>View All</Link>
+          <Link href='/product-detail' className='py-4 px-16 border-2 border-black/10 rounded-full'>View All</Link>
         </div>
       </div>
     </section>

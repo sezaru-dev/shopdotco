@@ -43,7 +43,7 @@ const Header = () => {
           <ul className='flex items-center gap-3 lg:gap-[0.9rem] text-[1.5rem] text-black'>
             <li className='md:hidden'><HiOutlineSearch style={{strokeWidth: '2px'}}/></li>
             <li>
-              <Link href='/'>
+              <Link href='/cart'>
                 <LuShoppingCart style={{strokeWidth: '2px'}}/>
               </Link>
             </li>

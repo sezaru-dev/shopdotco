@@ -17,7 +17,7 @@ type ProductProps ={
 
 const ProductCard = ({productName,image, rating, currentPrice, isOnPromo, previousPrice, discount}:ProductProps) => {
   return (
-    <Link href='/' className='pb-2 max-w-min lg:max-w-full snap-start'>
+    <Link href='/product-detail' className='pb-2 max-w-min lg:max-w-full snap-start'>
       <div className='relative w-[198px] h-[200px] lg:w-auto lg:h-[298px] lg:bg-[#F0EEED] flex items-center justify-center rounded-lg overflow-hidden'>
         <Image src={image} alt={productName} layout='fill' className='lg:hidden'/>
         <Image src={image} alt={productName} className='hidden lg:block'/>
