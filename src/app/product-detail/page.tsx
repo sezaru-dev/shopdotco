@@ -13,6 +13,7 @@ import { Metadata } from 'next';
 import ReviewsViewer from '@/components/ReviewsViewer';
 import YouMayAlsoLike from '@/components/YouMayAlsoLike';
 import HorizontalLine from '@/components/HorizontalLine';
+import ProductImageViewer from '@/components/ProductImageViewer';
 
 export const metadata: Metadata = {
   title: "One Life Graphic T-Shirt",
@@ -37,21 +38,7 @@ const page = () => {
           <div className='mt-5 grid lg:grid-cols-2 gap-4'>
 
             <div className='flex flex-col lg:flex-row-reverse gap-4'>
-              <div className='relative lg:w-3/4  h-[290px] lg:h-auto bg-[#F0EEED] rounded-lg overflow-hidden'>
-                <Image src={GraphicTshirt} layout='fill' alt='GraphicTshirt' className='object-contain object-center' />
-              </div>
-
-              <div className='grid grid-cols-3 lg:grid-cols-1 lg:w-1/4 gap-4 '>
-                <div className='relative rounded-lg overflow-hidden w-full bg-[#F0EEED] lg:grid lg:place-items-center'>
-                  <Image src={Thumbnail1} alt='ProductImg1' className='mx-auto'/>
-                </div>
-                <div className='relative rounded-lg overflow-hidden w-full bg-[#F0EEED] lg:grid lg:place-items-center'>
-                  <Image src={Thumbnail2} alt='Thumbnail2' className='mx-auto'/>
-                </div>
-                <div className='relative rounded-lg overflow-hidden w-full bg-[#F0EEED] lg:grid lg:place-items-center'>
-                  <Image src={Thumbnail3} alt='Thumbnail3' className='mx-auto'/>
-                </div>
-              </div>
+              <ProductImageViewer/>
             </div>
 
             {/* form */}
